@@ -31,11 +31,11 @@ jobs:
       run: mvn -B package --file pom.xml
 
     - name: Create Image
-      run: docker image build . -f Dockerfile -t gchr.io/kul-samples/sample-java-app:${{ github.run_number }}
+      run: docker image build . -f Dockerfile -t ghcr.io/kul-samples/sample-java-app:${{ github.run_number }}
     - name: Login to Github Container Registry
       run: |
         echo $CR_PAT | docker login ghcr.io -u kmayer10 --password-stdin
       env: 
         CR_PAT: ${{ secrets.CR_PAT }}
     - name: Push image in Github Container Registry
-      run: docker push gchr.io/kul-samples/sample-java-app:${{ github.run_number }}
+      run: docker push ghcr.io/kul-samples/sample-java-app:${{ github.run_number }}
