@@ -12,6 +12,7 @@ pipeline {
                 // Get some code from a GitHub repository
                 //Not needed this
                 //commenting for test
+                //test
                 //git 'https://github.com/kul-samples/sample-java-app.git'
 
                 // Run Maven on a Unix agent.
