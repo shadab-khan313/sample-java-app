@@ -16,7 +16,7 @@ pipeline {
                 //git 'https://github.com/kul-samples/sample-java-app.git'
 
                 // Run Maven on a Unix agent.
-                //test
+                //test again
                 sh "mvn clean install"
             }
 
