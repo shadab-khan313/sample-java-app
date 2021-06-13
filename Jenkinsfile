@@ -80,11 +80,11 @@ pipeline {
 		
             steps {
 		withAWS(){
-                    echo '[INFO] Executing Deployment on Test Environment'
-                    echo '------[INFO] Stopping the Application'
-                    echo '------[INFO] Uninstalling the Application'
-                    echo '------[INFO] Instaling New Version of the Application'
-                    echo '------[INFO] Starting the Application'
+                    echo '[INFO] Executing Deployment on AWS Environment'
+                    echo '------[INFO] AWS: Stopping the Application'
+                    echo '------[INFO] AWS: Uninstalling the Application'
+                    echo '------[INFO] AWS: Instaling New Version of the Application'
+                    echo '------[INFO] AWS: Starting the Application'
 		    }
             }
         }
