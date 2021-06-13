@@ -76,5 +76,17 @@ pipeline {
                 echo '------[INFO] Starting the Application'
             }
         }
+	    stage('Deploy using AWS Agent') {
+		
+            steps {
+		withAWS(){
+                    echo '[INFO] Executing Deployment on AWS Environment'
+                    echo '------[INFO] AWS: Stopping the Application'
+                    echo '------[INFO] AWS: Uninstalling the Application'
+                    echo '------[INFO] AWS: Instaling New Version of the Application'
+                    echo '------[INFO] AWS: Starting the Application'
+		    }
+            }
+        }
     }
 }
