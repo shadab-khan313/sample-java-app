@@ -64,7 +64,9 @@ pipeline {
 				    }
                 }
 			}
-		stage('Deploy on Production') {
+		
+        }
+	    stage('Deploy on Production') {
 			when {
 				branch 'main'
 			}
@@ -75,7 +77,6 @@ pipeline {
                 echo '------[INFO] Instaling New Version of the Application'
                 echo '------[INFO] Starting the Application'
             }
-        }
         }
     }
 }
