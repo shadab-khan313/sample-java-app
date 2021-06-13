@@ -11,6 +11,7 @@ pipeline {
             steps {
                 // Get some code from a GitHub repository
                 //git 'https://github.com/kul-samples/sample-java-app.git'
+                // test
 
                 // Run Maven on a Unix agent.
                 sh "mvn clean package"
