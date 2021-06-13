@@ -13,6 +13,7 @@ pipeline {
                 //git 'https://github.com/kul-samples/sample-java-app'
 
                 // Run Maven on a Unix agent.
+                //
                 sh "mvn clean install"
 
                 // To run Maven on a Windows agent, use
