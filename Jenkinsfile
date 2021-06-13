@@ -9,8 +9,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                // Get some code from a GitHub repository
-                git 'https://github.com/kul-samples/sample-java-app.git'
+                // Get some code from a GitHub repository ,not needed
+                //git 'https://github.com/kul-samples/sample-java-app.git'
 
                 // Run Maven on a Unix agent.
                 sh "mvn clean package"
