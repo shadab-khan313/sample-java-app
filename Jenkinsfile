@@ -63,6 +63,19 @@ pipeline {
                                               }
                                         }
 			            }
-           }
+           
+	       }
+	     stage('Deploy on Production') {
+		     when {
+				branch 'build_vinod'
+			}
+            steps {
+                echo '[INFO] Executing Deployment on Production Environment'
+                echo '------[INFO] Stopping the Application'
+                echo '------[INFO] Uninstalling the Application'
+                echo '------[INFO] Instaling New Version of the Application'
+                echo '------[INFO] Starting the Application'
+            }
+        }
     }
 }
